@@ -22,6 +22,7 @@
   "homepage": "https://github.com/alifhughes/vinyl-recommender#readme",
   "dependencies": {
     "disconnect": "^1.2.0",
+    "open": "0.0.5",
     "xmlhttprequest": "^1.8.0"
   }
 }
