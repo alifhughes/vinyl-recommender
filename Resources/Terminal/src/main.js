@@ -15,10 +15,6 @@ var releaseIdLimit = 11000000;
 // Get arguments array
 var args = process.argv.slice(2);
 
-db.getRelease(9815160, function(err, data){
-    console.log(data);
-});
-
 // Call the argument engine
 argumentEngine();
 
@@ -30,12 +26,22 @@ function argumentEngine () {
     // Check if any arguments at all
     if (!args.length) {
         // No arguments, get a random release or artist
-        open('https://www.google.co.uk/');
-        // Rand 0 or 1
+
+        //open('https://www.google.co.uk/');
+
         // Rand number for id
-        //      if call is 404
-        //      get diff rand num
-        //      continue
+        var randID = generateRandomID(releaseIdLimit);
+
+        /**
+         * if not found, do it again with diff rand num
+         * repeat until found
+         */
+
+        // Get release with rand id
+        db.getRelease(100000000000, function(err, data){
+            console.log(err);
+            console.log(data);
+        });
 
         return;
     }
@@ -71,6 +77,15 @@ function argumentEngine () {
  */
 function help () {
     console.log('HELP!');
+};
+
+/**
+ * Get a random id within the limit passed in
+ * @param {int} idLimit  The limit that the ID can go up to
+ * @returns {int}        The random id
+ */
+function generateRandomID (idLimit) {
+    return Math.floor(Math.random() * idLimit);
 };
 
 function prettifyJson () {
