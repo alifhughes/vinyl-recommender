@@ -1,4 +1,4 @@
-# vinyl-recommender
+# vinyl-recommender [![Build Status](https://travis-ci.org/alifhughes/vinyl-recommender.svg?branch=master)](https://travis-ci.org/alifhughes/vinyl-recommender)
 
 ### Primary objectives
 
@@ -9,7 +9,6 @@
 3. Ouput the retrieved result in manner in which allows easy access to the vinyl page information.
 4. Allow for the vinyl to be bought via commands.
 5. To retrieve random release from an artist.
-
 
 ### How to use
 
