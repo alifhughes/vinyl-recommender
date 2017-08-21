@@ -3,6 +3,9 @@
   "version": "1.0.0",
   "description": "Vinyl recommendation system",
   "main": "index.js",
+  "bin": {
+    "vinylrec": "./Resources/Terminal/src/index.js"
+  },
   "scripts": {
     "test": "tape 'Tests/**/*.js'"
   },
@@ -21,6 +24,9 @@
   },
   "homepage": "https://github.com/alifhughes/vinyl-recommender#readme",
   "dependencies": {
+    "co": "^4.6.0",
+    "co-prompt": "^1.0.0",
+    "commander": "^2.11.0",
     "disconnect": "^1.2.0",
     "open": "0.0.5",
     "xmlhttprequest": "^1.8.0"
